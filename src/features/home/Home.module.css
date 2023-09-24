@@ -3,10 +3,75 @@
   width: 100%;
 }
 
-.myVideo {
+.ten {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: 11;
+}
+
+.myVideo {
+  position: absolute;
+  z-index: 10;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.title {
+  position: absolute;
+  z-index: 12;
+  left: auto;
+  bottom: 6%;
+}
+
+.title h1 {
+  font-size: 10vw;
+  line-height: 1;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .title {
+    bottom: 2%;
+  }
+
+  .title h1 {
+    font-size: 13vw;
+  }
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.drop1 {
+  animation: drop-in 1s ease 200ms backwards;
+}
+
+.drop2 {
+  animation: drop-in 1200ms ease 500ms backwards;
+}
+
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
 }

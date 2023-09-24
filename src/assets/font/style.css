@@ -3,10 +3,9 @@
   src: url("NeueHaasUnica-ExtraBold.woff2") format("woff2"),
     url("NeueHaasUnica-ExtraBold.woff") format("woff"),
     url("NeueHaasUnica-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
   font-style: normal;
 }
 
 * {
-  font-family: "Neue Haas Unica";
+  font-family: "Neue Haas Unica", sans-serif;;
 }
