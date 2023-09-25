@@ -16,6 +16,10 @@
   z-index: 11;
 }
 
+.form {
+  margin: 60px 0;
+}
+
 .myVideo {
   position: absolute;
   z-index: 10;

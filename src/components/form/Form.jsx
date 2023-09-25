@@ -1,14 +1,22 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
+import { roll } from "../../assets";
 
 export const Form = () => {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState('');
+  const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handlePost = () => {
-    setNumber("");
-    setName("");
+  const handlePost = (e) => {
+    setLoading(true);
+    e.preventDefault();
+    setTimeout(() => {
+      setLoading(false);
+      setNumber("");
+      setName("");
+      setEmail("");
+    }, 2000);
   };
 
   return (
@@ -41,13 +49,19 @@ export const Form = () => {
               <input
                 type="email"
                 id="mail"
+                value={email}
                 required
-                placeholder="Необъязательно"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </label>
           </div>
-          <button onClick={handlePost}>Send</button>
+          <button
+            onSubmit={(e) => handlePost(e)}
+            className={loading ? styles.loading : ""}
+            disabled={loading}
+          >
+            {!loading ? "Send" : <img src={roll} />}
+          </button>
         </div>
       </div>
     </form>

@@ -8,5 +8,6 @@ import b2 from "./banner2.jpg";
 import b3 from "./banner3.jpg";
 import b4 from "./banner4.jpg";
 import heart from "./heart.mp4";
+import roll from "./roll.svg";
 
-export { FB, Insta, Logo, TG, b1, b2, b3, b4, menu, heart };
+export { FB, Insta, Logo, TG, b1, b2, b3, b4, menu, heart, roll };

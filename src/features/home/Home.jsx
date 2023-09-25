@@ -1,5 +1,5 @@
 import heart from "../../assets/heart.mp4";
-import { Form } from "../../components";
+import { Form, Text } from "../../components";
 import styles from "./Home.module.css";
 
 export function Home() {
@@ -21,7 +21,14 @@ export function Home() {
           </div>
         </div>
       </div>
-      <Form />
+      <div className={styles.form}>
+        <Form />
+      </div>
+      <Text
+        text1={{ first: "Creative UI/UX DIZAYN", second: "LONG LIVE A$AP" }}
+        text2={{ first: "Creative UI/UX DIZAYN", second: "LIVE LOVE A$AP" }}
+        text3={{ first: "Creative UI/UX DIZAYN", second: "PRAISE THE LORD" }}
+      />
     </section>
   );
 }
