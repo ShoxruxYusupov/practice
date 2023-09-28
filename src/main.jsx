@@ -4,6 +4,7 @@ import './styles/global.css';
 import './styles/variables.css';
 import './assets/font/style.css'
 import { App } from './app';
+import './i18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);

@@ -1,0 +1,37 @@
+:root {
+  --arrow-bg: rgb(0, 0, 0);
+  --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+  --option-bg: white;
+  --select-bg: rgba(255, 255, 255, 0.2);
+}
+
+/* <select> styles */
+select {
+  /* Reset */
+  appearance: none;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  padding: 6px 2rem 6px 1em;
+  background: linear-gradient(
+    to left,
+    var(--arrow-bg) 1em,
+    var(--select-bg) 1em
+  );
+  color: rgb(255, 255, 255);
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select option {
+  background-color: #000;
+}
+
+select:focus {
+  outline: none;
+}

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Links } from "../../constants";
 import { useMatchMedia } from "../../hooks";
 import { useState } from "react";
+import { Language } from "../language/Language";
 
 export const Header = () => {
   const { isMobile } = useMatchMedia();
@@ -17,13 +18,14 @@ export const Header = () => {
       <div className="container">
         <div className={styles.header}>
           <div className={styles.logo}>
-            <Link to='/'>
+            <Link to="/">
               <img src={Logo} alt="" />
             </Link>
           </div>
 
           {isMobile ? (
             <div className={styles.mobile}>
+              <Language />
               <img
                 src={menu}
                 alt=""
@@ -61,6 +63,7 @@ export const Header = () => {
             </div>
           ) : (
             <nav>
+              <Language />
               <ul className={styles.links}>
                 {links.map((item) => (
                   <li key={item.id}>

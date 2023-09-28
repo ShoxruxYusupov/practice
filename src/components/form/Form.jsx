@@ -1,11 +1,13 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 import { roll } from "../../assets";
+import { useTranslation } from "react-i18next";
 
 export const Form = () => {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
 
   const handlePost = (e) => {
@@ -25,7 +27,7 @@ export const Form = () => {
         <div className={styles.form}>
           <div className={styles.data}>
             <label htmlFor="name">
-              <span>Name</span>
+              <span>{t("form.name")}</span>
               <input
                 type="text"
                 id="name"
@@ -35,7 +37,7 @@ export const Form = () => {
               />
             </label>
             <label htmlFor="number">
-              <span>Number</span>
+              <span>{t("form.number")}</span>
               <input
                 type="number"
                 id="number"
@@ -49,8 +51,8 @@ export const Form = () => {
               <input
                 type="email"
                 id="mail"
-                value={email}
                 required
+                placeholder="Необъязательно"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </label>

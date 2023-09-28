@@ -1,24 +1,27 @@
+import { useTranslation } from "react-i18next";
+
 export const Links = () => {
+  const { t } = useTranslation();
   return [
     {
       id: 1,
       to: "/",
-      title: "Home",
+      title: t("header.l1"),
     },
     {
       id: 2,
       to: "/medicine",
-      title: "Medicine",
+      title: t("header.l2"),
     },
     {
       id: 3,
       to: "/blog",
-      title: "Blog",
+      title: t("header.l3"),
     },
     {
       id: 4,
       to: "/contact",
-      title: "Contact",
+      title: t("header.l4"),
     },
   ];
 };
